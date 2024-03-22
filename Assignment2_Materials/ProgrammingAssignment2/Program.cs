@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using LinkedLists;
 
 namespace ProgrammingAssignment2
@@ -34,7 +35,25 @@ namespace ProgrammingAssignment2
 				// course add more space between the
 				// comments as needed
 
-
+				int Value = GetValue();
+				int count = 0;
+				int sum = 0;
+				float mean = 0;
+				//float avg = (float)Value;
+				while (Value != -1)
+					{
+					count++;
+					sum = sum + Value;
+					Value = GetValue();
+					}
+				if (count > 0)
+				{
+					mean = (float)sum / count;
+				}
+				//Console.WriteLine("please enter some numbers");
+				//Console.ReadLine();
+				//Console.WriteLine(sum + " " + avg);
+				Console.WriteLine(count + " " + mean );
 
 				// Don't add or modify any code below
 				// this comment
